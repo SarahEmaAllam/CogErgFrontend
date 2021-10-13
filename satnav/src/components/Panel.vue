@@ -1,11 +1,12 @@
-<template>
+<template xmlns:margin-right="http://www.w3.org/1999/xhtml">
   <div class="tile is-ancestor">
     <div class="tile">
       <div><SettingsComponent></SettingsComponent></div>
     </div>
+    <div class="tile progressTile"  ><Progress></Progress></div>
     <div class="tile"><Map/></div>
-    <div class="tile"><Progress></Progress></div>
     <div class="tile"><SettingsCompRight></SettingsCompRight></div>
+
   </div>
 </template>
 
@@ -27,5 +28,10 @@ export default {
 </script>
 
 <style scoped>
+.progressTile {
+  margin-left: 150px;
+  margin-top: 70px;
+  position: absolute;
+}
 
 </style>

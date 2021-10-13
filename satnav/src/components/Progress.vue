@@ -7,11 +7,13 @@
         :label-position="labelPosition"
         :position="position"
         :size="size"
+        :overlay="overlay"
         vertical>
 
-      <b-step-item step="10m" label="Right" :clickable="isStepsClickable" @click="simple"></b-step-item>
+      <b-step-item step="10m" label="Right" :clickable="isStepsClickable" @click="snackbar"></b-step-item>
 
-      <b-step-item step="10m" label="Forward" :clickable="isStepsClickable" @click="simple"></b-step-item>
+      <b-step-item step="10m" label="Forward" :clickable="isStepsClickable" @click="snackbar"></b-step-item>
+
 
 
       <b-step-item step="30m" :visible="showSocial" label="Stop!" :type="'is-danger'" :clickable="isStepsClickable"
@@ -24,7 +26,6 @@
 
 
       <b-step-item :step="showSocial ? '5m' : '5m'" label="Left" :clickable="isStepsClickable" :type="'is-success'" @click="success">
-        <h1 class="title has-text-centered">Arrived at destination</h1>
       </b-step-item>
 
 
@@ -80,6 +81,9 @@ export default {
         message: 'Something happened correctly!',
         type: 'is-success'
       })
+    },
+    snackbar() {
+      this.$buefy.snackbar.open(`Default, positioned bottom-right with a green 'OK' button`)
     },
     simple() {
       const notif = this.$buefy.notification.open({

@@ -1,8 +1,6 @@
 <template>
   <section>
-    <span class="material-icons">
-settings
-</span>
+
     <b-sidebar
         type="is-light"
         :fullheight="fullheight"
@@ -10,6 +8,7 @@ settings
         :overlay="overlay"
         :right="right"
         v-model="open"
+        size="is-large"
     >
       <div class="p-1">
 <!--        <img-->
@@ -17,13 +16,13 @@ settings
 <!--            alt="Lightweight UI components for Vue.js based on Bulma"-->
 <!--        />-->
         <b-menu>
-          <span class="material-icons">settings</span>
+
           <b-menu-list label="Settings">
             <b-menu-item icon="information-outline" label="Safety Info">
               <b-button
                   label="Heavy Rain!"
                   type="is-danger"
-                  size="is-medium"
+                  size="is-large"
                   @click="danger" />
             </b-menu-item>
 

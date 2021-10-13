@@ -12,6 +12,8 @@ import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
 Vue.use(VueMaterial)
 
+import 'leaflet/dist/leaflet.css';
+
 library.add(faCheck, faCheckCircle, faInfoCircle, faExclamationTriangle, faExclamationCircle,
     faArrowUp, faAngleRight, faAngleLeft, faAngleDown,
     faEye, faEyeSlash, faCaretDown, faCaretUp, faUpload);
@@ -25,6 +27,8 @@ Vue.use(Buefy, {
   defaultIconPack: 'fas',
 });
 import 'buefy/dist/buefy.css'
+
+
 
 Vue.config.productionTip = false
 Vue.use(Buefy)
